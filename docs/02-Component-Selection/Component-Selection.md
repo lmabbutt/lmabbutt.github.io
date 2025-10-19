@@ -5,7 +5,7 @@
 
 1. PC280LG-301
 
-    ![](image1.png)
+    ![](MFG_PC280LG-301.jpg)
 
     * $1/each
     * [link to product](http://www.digikey.com/product-detail/en/ECS-40.3-S-5PX-TR/XC1259TR-ND/827366)
