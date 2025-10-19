@@ -2,8 +2,6 @@
 title: Component Selection 
 ---
 
-## Examples
-
 ### Style 2
 
 > Also acceptable, more markdown friendly
