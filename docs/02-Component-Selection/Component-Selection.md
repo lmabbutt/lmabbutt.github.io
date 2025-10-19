@@ -16,7 +16,7 @@
     | Compatible with PSoC                      | Needs special PCB layout.                                        |
     | Meets surface mount constraint of project |
 
-1. CTX936TR-ND surface mount oscillator
+1. HG37-120-AA-00
 
     ![](D.jpg)
 
@@ -29,6 +29,31 @@
     | Stable over operating temperature                                 | Slow shipping speed |
     | Direct interface with PSoC (no external circuitry required) range |
 
-**Choice:** Option 2: CTX936TR-ND surface mount oscillator
+**Soil Moisture Sensor**
 
-**Rationale:** A clock oscillator is easier to work with because it requires no external circuitry in order to interface with the PSoC. This is particularly important because we are not sure of the electrical characteristics of the PCB, which could affect the oscillation of a crystal. While the shipping speed is slow, according to the website if we order this week it will arrive within 3 weeks.
+1. 13637
+
+    ![](MFG_PC280LG-301.jpg)
+
+    * $7.95/each
+    * [link to product]([https://www.digikey.com/en/products/detail/johnson-motor/PC280LG-301/12719595?s=N4IgTCBcDaIAoGEwA4AMAZA4gWgMyoEYQBdAXyA](https://www.digikey.com/en/products/detail/sparkfun-electronics/13637/7400839?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mayriRdZcvui0HTdYMicDMSrmrPi3kqTxbDrLqTR_hUmT-cr0AV9jhoCaVgQAvD_BwE))
+
+    | Pros                                      | Cons                                                             |
+    | ----------------------------------------- | ---------------------------------------------------------------- |
+    | Inexpensive                               | Requires external components and support circuitry for interface |
+    | Compatible with PSoC                      | Needs special PCB layout.                                        |
+    | Meets surface mount constraint of project |
+
+1. SEN0114
+
+    ![](D.jpg)
+
+    * $2.70/each
+    * [Link to product](https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mbQSvFXrFn6uSSuxGg_qehQQK9Uty_P8yXZ4lFzpzHMJX-7nO5745RoCtCwQAvD_BwE)
+
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Outputs a square wave                                             | More expensive      |
+    | Stable over operating temperature                                 | Slow shipping speed |
+    | Direct interface with PSoC (no external circuitry required) range |
+
