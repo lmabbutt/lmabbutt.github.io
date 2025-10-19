@@ -1,14 +1,9 @@
----
-title: Component Selection 
----
 
-### Style 2
+### Componenet Selection
 
-> Also acceptable, more markdown friendly
+**DC Motor**
 
-**External Clock Module**
-
-1. XC1259TR-ND surface mount crystal
+1. PC280LG-301
 
     ![](image1.png)
 
