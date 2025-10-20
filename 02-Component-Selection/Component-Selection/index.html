@@ -864,7 +864,7 @@
 </tr>
 <tr>
 <td>Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.</td>
-<td>Short listed life in some datasheets (typical life value shown) — you’ll want to check duty cycle; for continuous high-load duty a more robust motor or gearbox may be required. (datasheet lists a typical life figure; actual life depends on load/environment).</td>
+<td>Short listed life in some datasheets. For continuous high-load duty a more robust motor or gearbox may be required.</td>
 </tr>
 </tbody>
 </table>
@@ -921,23 +921,23 @@
 </thead>
 <tbody>
 <tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td>Capacitive measurement — less corrosion-prone and longer-lasting than resistive probes.</td>
+<td>Analog output only — requires ADC input on the microcontroller.</td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
+<td>Simple 3-wire interface — easy to connect to Arduino, ESP32, or other MCUs.</td>
+<td>Not factory-calibrated — needs user calibration for absolute moisture values.</td>
 </tr>
 <tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
+<td>Wide voltage range (3.3–5 V) — compatible with both 3.3 V and 5 V systems.</td>
+<td>Sensitive to electrical noise — may need filtering or shielding in long-wire installations.</td>
 </tr>
 </tbody>
 </table>
 </li>
 <li>
 <p>SEN0114</p>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../SEN0114.jpg" data-desc-position="bottom"><img alt="" src="../SEN0114.jpg"></a></p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../SEN0114.jpg" data-desc-position="bottom"><img alt="" src="../SEN0114.jpg"></a>    </p>
 <ul>
 <li>$2.70/each</li>
 <li><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&amp;gclid=CjwKCAjwmNLHBhA4EiwA3ts3mbQSvFXrFn6uSSuxGg_qehQQK9Uty_P8yXZ4lFzpzHMJX-7nO5745RoCtCwQAvD_BwE">Link to product</a></li>
@@ -951,16 +951,16 @@
 </thead>
 <tbody>
 <tr>
-<td>Outputs a square wave</td>
-<td>More expensive</td>
+<td>Low-cost sensor — one of the most inexpensive soil moisture probes available.</td>
+<td>Prone to corrosion — exposed electrodes degrade quickly when left in wet soil for long periods.</td>
 </tr>
 <tr>
-<td>Stable over operating temperature</td>
-<td>Slow shipping speed</td>
+<td>Simple 3-wire analog interface — easily integrates with microcontrollers (Arduino, ESP32, etc.).</td>
+<td>Requires calibration — analog output varies with soil type and salinity; no absolute moisture reference.</td>
 </tr>
 <tr>
-<td>Direct interface with PSoC (no external circuitry required) range</td>
-<td></td>
+<td>Compatible with both 3.3 V and 5 V logic — flexible for most embedded platforms.</td>
+<td>High current draw (~35 mA) compared to capacitive alternatives (less suitable for low-power systems).</td>
 </tr>
 </tbody>
 </table>
@@ -987,16 +987,16 @@
 </thead>
 <tbody>
 <tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td>Integrated precision voltage reference — simplifies powering bridge sensors and reduces external component count.</td>
+<td>Requires proper PCB layout — noise pickup can degrade performance if wiring is unshielded.</td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
+<td>Wide supply range (2.7 V–36 V) — compatible with many analog and mixed-signal systems.</td>
+<td>Through-hole PDIP form — larger footprint; may need breakout for compact embedded boards.</td>
 </tr>
 <tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
+<td>Adjustable gain (4 – 10,000) — flexible for various sensor outputs and ADC ranges.</td>
+<td>Reference current limited to ~25 mA — cannot power large sensors or multiple bridges.</td>
 </tr>
 </tbody>
 </table>
@@ -1017,16 +1017,16 @@
 </thead>
 <tbody>
 <tr>
-<td>Outputs a square wave</td>
-<td>More expensive</td>
+<td>Four independent channels — flexible configuration for half-bridge or full H-bridge control.</td>
+<td>Not a standalone motor driver — requires external power MOSFETs for current handling.</td>
 </tr>
 <tr>
-<td>Stable over operating temperature</td>
-<td>Slow shipping speed</td>
+<td>High voltage tolerance (up to 80 V) — supports large DC motors or inductive loads.</td>
+<td>Complex circuit design — needs bootstrap capacitors, MOSFET selection, and protection circuitry.</td>
 </tr>
 <tr>
-<td>Direct interface with PSoC (no external circuitry required) range</td>
-<td></td>
+<td>High drive current (2.5 A) — enables fast switching of large MOSFET gates.</td>
+<td>Requires proper PCB layout — sensitive to high dv/dt and EMI in high-current applications.</td>
 </tr>
 </tbody>
 </table>
