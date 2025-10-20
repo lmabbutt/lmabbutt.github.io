@@ -990,16 +990,39 @@
 </li>
 <li>
 <p><strong>Custom Electrical Option/Mechanical Option</strong>
-    Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.
-   | Pros                                                                                   | Cons / Risks                                                                         |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| <strong>Low corrosion</strong> (capacitive) — longer lifetime than exposed resistive probes.        | <strong>Higher complexity &amp; cost</strong> than cheap resistive probe.                             |
-| <strong>Low power</strong> — can be battery operated for months/years.                              | <strong>Probe coating affects sensitivity</strong> — must choose coating carefully and calibrate. |
-| <strong>High accuracy &amp; repeatability</strong> with cap-to-digital IC and temperature compensation. | <strong>Environmental factors (salinity, soil composition)</strong> still require calibration.    |
-| <strong>Digital output &amp; easy integration</strong> (I²C/ADC) for embedded projects.                 | <strong>Sealing &amp; waterproofing complexity</strong> — requires good mechanical design.            |
-| <strong>Customizable form factor &amp; depth sensitivity</strong> via probe geometry.                   | <strong>Long-term drift possible</strong> — periodic recalibration recommended.                   |</p>
+    Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.</p>
 </li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Low corrosion</strong> (capacitive) — longer lifetime than exposed resistive probes.</td>
+<td><strong>Higher complexity &amp; cost</strong> than cheap resistive probe.</td>
+</tr>
+<tr>
+<td><strong>Low power</strong> — can be battery operated for months/years.</td>
+<td><strong>Probe coating affects sensitivity</strong> — must choose coating carefully and calibrate.</td>
+</tr>
+<tr>
+<td><strong>High accuracy &amp; repeatability</strong> with cap-to-digital IC and temperature compensation.</td>
+<td><strong>Environmental factors (salinity, soil composition)</strong> still require calibration.</td>
+</tr>
+<tr>
+<td><strong>Digital output &amp; easy integration</strong> (I²C/ADC) for embedded projects.</td>
+<td><strong>Sealing &amp; waterproofing complexity</strong> — requires good mechanical design.</td>
+</tr>
+<tr>
+<td><strong>Customizable form factor &amp; depth sensitivity</strong> via probe geometry.</td>
+<td><strong>Long-term drift possible</strong> — periodic recalibration recommended.</td>
+</tr>
+</tbody>
+</table>
 <p><strong>H Bridge</strong></p>
 <ol>
 <li>
@@ -1064,16 +1087,35 @@
 </li>
 <li>
 <p><strong>Custom Electrical Option/Mechanical Option</strong>
-       Build a robust, efficient, bidirectional motor driver (H-bridge) that supports PWM speed control, current limiting, and fast switching for motors up to chosen supply.
-   | <strong>Pros</strong>                                                                                                                             | <strong>Cons</strong>                                                                                                                            |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| <strong>Fully customizable</strong> — can tailor voltage/current capacity, switching speed, and thermal handling for specific motor requirements. | <strong>Complex design</strong> — requires careful timing and dead-time control to prevent MOSFET shoot-through.                                 |
-| <strong>Potentially lower cost per unit</strong> when built in quantity, since components can be sourced individually.                            | <strong>More development time</strong> — circuit design, testing, and PCB layout take significantly longer than using an integrated H-bridge IC. |
-| <strong>Higher current handling</strong> — discrete MOSFETs can support higher power motors compared to small integrated drivers.                 | <strong>Requires external logic</strong> — needs a separate driver or microcontroller PWM logic to control switching safely.                     |
-| <strong>Easier repairability</strong> — individual transistors and components can be replaced if damaged.                                         | <strong>Thermal management challenges</strong> — heat sinks or fans may be needed to maintain safe operating temperatures.                       |
-|                | <strong>Increased board space</strong> — discrete component designs are physically larger than integrated driver ICs.                            |</p>
+       Build a robust, efficient, bidirectional motor driver (H-bridge) that supports PWM speed control, current limiting, and fast switching for motors up to chosen supply.</p>
 </li>
 </ol>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fully customizable</strong> — can tailor voltage/current capacity, switching speed, and thermal handling for specific motor requirements.</td>
+<td><strong>Complex design</strong> — requires careful timing and dead-time control to prevent MOSFET shoot-through.</td>
+</tr>
+<tr>
+<td><strong>Potentially lower cost per unit</strong> when built in quantity, since components can be sourced individually.</td>
+<td><strong>More development time</strong> — circuit design, testing, and PCB layout take significantly longer than using an integrated H-bridge IC.</td>
+</tr>
+<tr>
+<td><strong>Higher current handling</strong> — discrete MOSFETs can support higher power motors compared to small integrated drivers.</td>
+<td><strong>Requires external logic</strong> — needs a separate driver or microcontroller PWM logic to control switching safely.</td>
+</tr>
+<tr>
+<td><strong>Easier repairability</strong> — individual transistors and components can be replaced if damaged.</td>
+<td><strong>Thermal management challenges</strong> — heat sinks or fans may be needed to maintain safe operating temperatures.</td>
+</tr>
+</tbody>
+</table>
 
 
 
