@@ -29,6 +29,8 @@
     | Stable over operating temperature                                 | Slow shipping speed |
     | Direct interface with PSoC (no external circuitry required) range |
 
+3. Custom Electrical Option/Mechanical Option
+
 **Soil Moisture Sensor**
 
 1. 13637
@@ -36,7 +38,7 @@
     ![](13637.jpg)
 
     * $7.95/each
-    * [link to product(https://www.digikey.com/en/products/detail/sparkfun-electronics/13637/7400839?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mayriRdZcvui0HTdYMicDMSrmrPi3kqTxbDrLqTR_hUmT-cr0AV9jhoCaVgQAvD_BwE)
+    * [link to product](https://www.digikey.com/en/products/detail/sparkfun-electronics/13637/7400839?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mayriRdZcvui0HTdYMicDMSrmrPi3kqTxbDrLqTR_hUmT-cr0AV9jhoCaVgQAvD_BwE)
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
@@ -56,6 +58,8 @@
     | Outputs a square wave                                             | More expensive      |
     | Stable over operating temperature                                 | Slow shipping speed |
     | Direct interface with PSoC (no external circuitry required) range |
+
+3. Custom Electrical Option/Mechanical Option
 
    **H Bridge**
 
@@ -84,4 +88,6 @@
     | Outputs a square wave                                             | More expensive      |
     | Stable over operating temperature                                 | Slow shipping speed |
     | Direct interface with PSoC (no external circuitry required) range |
+
+3. Custom Electrical Option/Mechanical Option
 
