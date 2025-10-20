@@ -33,8 +33,15 @@
     | Moderate continuous torque (~392 mN·m) — suitable for small mechanical loads without extra gearbox.                               | Brushed DC motor (likely) — brush wear and EMI; not as long-lived as brushless options for heavy continuous-duty applications. |
     | Compact (Ø37 mm) — small footprint that fits into constrained mechanical designs. | No integrated encoder/feedback — add external encoder or sensor for closed-loop position/speed control. |
 
-3. Custom Electrical Option/Mechanical Option
+3. **Custom Electrical Option/Mechanical Option**
+       A compact planetary gearbox + output rotary encoder + driver + mounting built around a small DC can motor. This option is intended where off-the-shelf torque/speed/feedback packages are unavailable or you want tighter control over form-factor, gear ratio, and sensor placement.
 
+   | Pros                                      | Cons                                                             |
+   | ----------------------------------------- | ---------------------------------------------------------------- |
+   |Custom ratio & footprint — choose exact gear ratio, shaft length, and mounting pattern to fit your device.| Higher design & build complexity vs buying an off-the-shelf geared motor.|
+   |Easier maintenance/repair — you can replace gears, bearings, encoder separately.|Prototype accuracy depends on manufacturing quality (3D printed gears/print tolerances introduce backlash).|
+   |Integrated high-resolution feedback — encoder on output gives direct, backlash-compensated position readings.|Longer development time & potential higher unit cost for single pieces.|
+   
 **Soil Moisture Sensor**
 
 1. 13637
@@ -46,8 +53,8 @@
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Capacitive measurement — less corrosion-prone and longer-lasting than resistive probes.                               | Analog output only — requires ADC input on the microcontroller. |
-    | Simple 3-wire interface — easy to connect to Arduino, ESP32, or other MCUs.                     | Not factory-calibrated — needs user calibration for absolute moisture values.                                        |
+    | Capacitive measurement — less corrosion-prone and longer-lasting than resistive probes.| Analog output only — requires ADC input on the microcontroller. |
+    | Simple 3-wire interface — easy to connect to Arduino, ESP32, or other MCUs.| Not factory-calibrated — needs user calibration for absolute moisture values.|
     | Wide voltage range (3.3–5 V) — compatible with both 3.3 V and 5 V systems. | Sensitive to electrical noise — may need filtering or shielding in long-wire installations. |
 
 2. SEN0114
