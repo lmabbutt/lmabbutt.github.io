@@ -41,6 +41,9 @@
    |Custom ratio & footprint — choose exact gear ratio, shaft length, and mounting pattern to fit your device.| Higher design & build complexity vs buying an off-the-shelf geared motor.|
    |Easier maintenance/repair — you can replace gears, bearings, encoder separately.|Prototype accuracy depends on manufacturing quality (3D printed gears/print tolerances introduce backlash).|
    |Integrated high-resolution feedback — encoder on output gives direct, backlash-compensated position readings.|Longer development time & potential higher unit cost for single pieces.|
+
+**Choice and Rationale**
+    The HG37-120-AA-00 DC motor was selected as the optimal choice because it provides a strong balance of torque, speed, and reliability for the project. Its integrated 120:1 planetary gearbox delivers the low-speed, high-torque output needed for precise motion without requiring additional mechanical components. This integration simplifies assembly, reduces design time, and ensures consistent performance. The motor’s documented specifications and build quality make it easier to model, test, and control compared to cheaper hobby motors. Although it costs slightly more than basic options like the PC280LG-301, the HG37-120-AA-00’s ease of integration, reliability, and predictable results make it the most practical and efficient solution for this embedded systems design project.
    
 **Soil Moisture Sensor**
 
@@ -81,6 +84,10 @@
 | **Digital output & easy integration** (I²C/ADC) for embedded projects.                 | **Sealing & waterproofing complexity** — requires good mechanical design.            |
 | **Customizable form factor & depth sensitivity** via probe geometry.                   | **Long-term drift possible** — periodic recalibration recommended.                   |
 
+**Choice and Rationale**
+    The **SEN0114 soil moisture sensor** was selected as the best option because it offers a reliable and easy-to-use design with analog output, making it simple to integrate into a microcontroller-based system. It provides stable readings compared to cheaper resistive sensors and is less prone to corrosion due to its corrosion-resistant coating. The SEN0114 also includes clear documentation and calibration support from DFRobot, ensuring consistent data collection for soil monitoring applications. While it is slightly more expensive than basic resistive sensors like the 13637, its improved durability, accuracy, and compatibility with embedded systems make it the most dependable and efficient choice for this project.
+
+
    **H Bridge**
 
 1. INA125P
@@ -118,5 +125,8 @@
 | **Potentially lower cost per unit** when built in quantity, since components can be sourced individually.                            | **More development time** — circuit design, testing, and PCB layout take significantly longer than using an integrated H-bridge IC. |
 | **Higher current handling** — discrete MOSFETs can support higher power motors compared to small integrated drivers.                 | **Requires external logic** — needs a separate driver or microcontroller PWM logic to control switching safely.                     |
 | **Easier repairability** — individual transistors and components can be replaced if damaged.                                         | **Thermal management challenges** — heat sinks or fans may be needed to maintain safe operating temperatures.                       |
+
+**Choice and Rationale**
+    The **HIP4082IPZ H-bridge driver** was selected as the optimal choice because it provides high efficiency, robustness, and flexibility for controlling DC motors in the project. It supports **high-voltage operation up to 80 V** and can deliver large peak currents, making it suitable for a wide range of motor sizes. The HIP4082IPZ also features built-in **high- and low-side MOSFET drivers**, allowing precise PWM control and reliable switching performance. Although it requires external MOSFETs and slightly more complex circuit design compared to all-in-one motor driver ICs, this modular approach offers greater customization and power-handling capability. Its strong balance of performance, control precision, and scalability makes it the most effective and future-proof solution for the project’s motor control needs.
 
 
