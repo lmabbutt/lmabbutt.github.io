@@ -12,11 +12,15 @@
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Inexpensive                               | Requires external components and support circuitry for interface |
-    | Compatible with PSoC                      | Needs special PCB layout.                                        |
-    | Meets surface mount constraint of project |
+    | Compact, lightweight package — good for small actuators and tight space. (Ø ~25 mm, ~52 g).                         | Low output torque at shaft — needs gearbox for meaningful load/positioning (nominal torque ~4.6 mN·m). |
+    | High free-running speed (9,300 RPM) — useful where high speed is desired or for small gearboxes.                    | Very high RPM at the motor shaft is often not useful directly for robotics/positioning; gearing/torque conversion required which adds complexity.                                        |
+    | Relatively low nominal current (0.32 A) — low steady-state power draw for light loads. | Stall current ~1.8 A — motor driver must handle surge (and have current limiting); supply must support transient current.|
+    | Affordable / widely available — low unit price through distributors (typical single-unit price in low dollars).| Brushed design — brush wear, brush noise/EMI, and maintenance over time; not as long-lived as brushless options in many applications.|
+    | Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.| No built-in encoder/feedback — if position/speed closed-loop control is required, you must add an external encoder or hall sensor.|
+    | Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.| Short listed life in some datasheets (typical life value shown) — you’ll want to check duty cycle; for continuous high-load duty a more robust motor or gearbox may be required. (datasheet lists a typical life figure; actual life depends on load/environment).|
+        
 
-2. HG37-120-AA-00
+3. HG37-120-AA-00
 
     ![](D.jpg)
 
@@ -29,7 +33,7 @@
     | Stable over operating temperature                                 | Slow shipping speed |
     | Direct interface with PSoC (no external circuitry required) range |
 
-3. Custom Electrical Option/Mechanical Option
+4. Custom Electrical Option/Mechanical Option
 
 **Soil Moisture Sensor**
 
