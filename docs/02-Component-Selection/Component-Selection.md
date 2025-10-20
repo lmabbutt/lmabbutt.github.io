@@ -72,7 +72,8 @@
 
 3. **Custom Electrical Option/Mechanical Option**
     Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.
-   | Pros                                                                                   | Cons / Risks                                                                         |
+
+| Pros                                                                                   | Cons                                                                          |
 | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | **Low corrosion** (capacitive) — longer lifetime than exposed resistive probes.        | **Higher complexity & cost** than cheap resistive probe.                             |
 | **Low power** — can be battery operated for months/years.                              | **Probe coating affects sensitivity** — must choose coating carefully and calibrate. |
@@ -110,12 +111,12 @@
 
 3. **Custom Electrical Option/Mechanical Option**
        Build a robust, efficient, bidirectional motor driver (H-bridge) that supports PWM speed control, current limiting, and fast switching for motors up to chosen supply.
-   | **Pros**                                                                                                                             | **Cons**                                                                                                                            |
-| :----------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------- |
-| **Fully customizable** — can tailor voltage/current capacity, switching speed, and thermal handling for specific motor requirements. | **Complex design** — requires careful timing and dead-time control to prevent MOSFET shoot-through.                                 |
+   
+| Pros                                               | Cons        |
+|-------------------------------------------------------------------| ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Fully customizable** — can tailor voltage/current capacity, switching speed, and thermal handling for specific motor requirements. | **Complex design** — requires careful timing and dead-time control to prevent MOSFET shoot-through.|
 | **Potentially lower cost per unit** when built in quantity, since components can be sourced individually.                            | **More development time** — circuit design, testing, and PCB layout take significantly longer than using an integrated H-bridge IC. |
 | **Higher current handling** — discrete MOSFETs can support higher power motors compared to small integrated drivers.                 | **Requires external logic** — needs a separate driver or microcontroller PWM logic to control switching safely.                     |
 | **Easier repairability** — individual transistors and components can be replaced if damaged.                                         | **Thermal management challenges** — heat sinks or fans may be needed to maintain safe operating temperatures.                       |
-|                | **Increased board space** — discrete component designs are physically larger than integrated driver ICs.                            |
 
 
