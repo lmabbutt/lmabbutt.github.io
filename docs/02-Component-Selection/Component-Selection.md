@@ -20,7 +20,7 @@
     | Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.| Short listed life in some datasheets (typical life value shown) — you’ll want to check duty cycle; for continuous high-load duty a more robust motor or gearbox may be required. (datasheet lists a typical life figure; actual life depends on load/environment).|
         
 
-3. HG37-120-AA-00
+2. HG37-120-AA-00
 
     ![](D.jpg)
 
@@ -29,11 +29,11 @@
 
     | Pros                                                              | Cons                |
     | ----------------------------------------------------------------- | ------------------- |
-    | Outputs a square wave                                             | More expensive      |
-    | Stable over operating temperature                                 | Slow shipping speed |
-    | Direct interface with PSoC (no external circuitry required) range |
+    | Integrated planetary gearbox (1:120) — delivers usable low speed and much higher output torque than raw motor. Good for compact, low-RPM actuators.                                            | Relatively high unit cost.      |
+    | Moderate continuous torque (~392 mN·m) — suitable for small mechanical loads without extra gearbox.                               | Brushed DC motor (likely) — brush wear and EMI; not as long-lived as brushless options for heavy continuous-duty applications. |
+    | Compact (Ø37 mm) — small footprint that fits into constrained mechanical designs. | No integrated encoder/feedback — add external encoder or sensor for closed-loop position/speed control. |
 
-4. Custom Electrical Option/Mechanical Option
+3. Custom Electrical Option/Mechanical Option
 
 **Soil Moisture Sensor**
 
