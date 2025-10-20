@@ -843,16 +843,28 @@
 </thead>
 <tbody>
 <tr>
-<td>Inexpensive</td>
-<td>Requires external components and support circuitry for interface</td>
+<td>Compact, lightweight package — good for small actuators and tight space. (Ø ~25 mm, ~52 g).</td>
+<td>Low output torque at shaft — needs gearbox for meaningful load/positioning (nominal torque ~4.6 mN·m).</td>
 </tr>
 <tr>
-<td>Compatible with PSoC</td>
-<td>Needs special PCB layout.</td>
+<td>High free-running speed (9,300 RPM) — useful where high speed is desired or for small gearboxes.</td>
+<td>Very high RPM at the motor shaft is often not useful directly for robotics/positioning; gearing/torque conversion required which adds complexity.</td>
 </tr>
 <tr>
-<td>Meets surface mount constraint of project</td>
-<td></td>
+<td>Relatively low nominal current (0.32 A) — low steady-state power draw for light loads.</td>
+<td>Stall current ~1.8 A — motor driver must handle surge (and have current limiting); supply must support transient current.</td>
+</tr>
+<tr>
+<td>Affordable / widely available — low unit price through distributors (typical single-unit price in low dollars).</td>
+<td>Brushed design — brush wear, brush noise/EMI, and maintenance over time; not as long-lived as brushless options in many applications.</td>
+</tr>
+<tr>
+<td>Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.</td>
+<td>No built-in encoder/feedback — if position/speed closed-loop control is required, you must add an external encoder or hall sensor.</td>
+</tr>
+<tr>
+<td>Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.</td>
+<td>Short listed life in some datasheets (typical life value shown) — you’ll want to check duty cycle; for continuous high-load duty a more robust motor or gearbox may be required. (datasheet lists a typical life figure; actual life depends on load/environment).</td>
 </tr>
 </tbody>
 </table>
