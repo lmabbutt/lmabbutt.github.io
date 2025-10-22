@@ -4,7 +4,7 @@ title: Schematic
 
 ## Overview
 
-This schematic is design to support .... (highlight functionally, power, and controller).
+This schematic is design to show my subsystem of the team project. My subsystem handles sending and receiving signals from the hub microcontroller and actuating the sprinkler head.
 
 
 ![schematic](SCHEMATIC SCREENSHOT.png){style width:"350" height:"300;"}
