@@ -961,12 +961,14 @@
 </table>
 </li>
 <li>
-<p>SEN0114</p>
+<p>LM2596S-5.0/NOPB</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../SEN0114.jpg" data-desc-position="bottom"><img alt="" src="../SEN0114.jpg"></a>    </p>
 <ul>
-<li>$2.70/each</li>
-<li><a href="https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&amp;gclid=CjwKCAjwmNLHBhA4EiwA3ts3mbQSvFXrFn6uSSuxGg_qehQQK9Uty_P8yXZ4lFzpzHMJX-7nO5745RoCtCwQAvD_BwE">Link to product</a></li>
+<li>$6.97/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-5-0-NOPB/334842?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=120565755&amp;gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&amp;gclid=CjwKCAjwjffHBhBuEiwAKMb8pIywmR_rOZ2D7phSToa-dDFOJG8xSLg9A2nu5mbH3dzjYsYaxZFg4BoCqPYQAvD_BwE">Link to product</a></li>
 </ul>
+</li>
+</ol>
 <table>
 <thead>
 <tr>
@@ -976,24 +978,22 @@
 </thead>
 <tbody>
 <tr>
-<td>Low-cost sensor — one of the most inexpensive soil moisture probes available.</td>
-<td>Prone to corrosion — exposed electrodes degrade quickly when left in wet soil for long periods.</td>
+<td><strong>High efficiency (switching regulator)</strong> — Because it’s a buck converter operating at ~150 kHz, it wastes much less power as heat compared to linear regulators.</td>
+<td><strong>Requires external components</strong> — You’ll need to choose and size inductor(s), diode(s), capacitors properly. More design effort than a simple 3-terminal linear regulator.</td>
 </tr>
 <tr>
-<td>Simple 3-wire analog interface — easily integrates with microcontrollers (Arduino, ESP32, etc.).</td>
-<td>Requires calibration — analog output varies with soil type and salinity; no absolute moisture reference.</td>
+<td><strong>Wide input voltage range</strong> — Operates from ~4.5 V up to 40 V input, making it suitable for many battery/solar systems.</td>
+<td><strong>Requires good layout/thermal considerations</strong> — At high currents or large input/output difference, cooling and PCB layout become important to avoid overheating or noise.</td>
 </tr>
 <tr>
-<td>Compatible with both 3.3 V and 5 V logic — flexible for most embedded platforms.</td>
-<td>High current draw (~35 mA) compared to capacitive alternatives (less suitable for low-power systems).</td>
+<td><strong>3 A output current capability</strong> — Good for powering moderate loads.</td>
+<td><strong>Not fully synchronous</strong> — Because it is a non-synchronous switcher (requires external catch diode), the efficiency at very high load or low input/output difference may not match modern synchronous converters.</td>
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p><strong>Custom Electrical Option/Mechanical Option</strong>
-    Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.</p>
-</li>
+<ol>
+<li><strong>Custom Electrical Option/Mechanical Option</strong>
+    Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.</li>
 </ol>
 <table>
 <thead>
