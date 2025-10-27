@@ -3,9 +3,9 @@
 
 **DC Motor**
 
-1. PC280LG-301
+1. AdaFruit 711 DC Motor
 
-    ![](MFG_PC280LG-301.jpg)
+   ![](711 DC Motor.png)
 
     * $1.95/each
     * [link to product](https://www.digikey.com/en/products/detail/adafruit-industries-llc/711/5353610?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLlhl1FW1Wjj4ieek0F8WLsTTK&gclid=CjwKCAjwjffHBhBuEiwAKMb8pIf5j8fn3Y5DqKT9JQaZDD6ReWLr_gdSpv1T_ynpheKjqwGf2sxxZBoCSCIQAvD_BwE)
@@ -20,7 +20,7 @@
 
 2. HG37-120-AA-00
 
-    ![](D.jpg)
+    ![](HG37-120-AA-00.jpg)
 
     * $29.92/each
     * [Link to product](https://www.digikey.com/en/products/detail/nidec-components-corporation/HG37-120-AA-00/14553405?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mSe77BaK-WFdIAoTd1RI54J1lqSxFic8uShvaWAAsPBEAm5zt6otORoC6HsQAvD_BwE)
