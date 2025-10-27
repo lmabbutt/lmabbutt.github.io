@@ -3,7 +3,7 @@
 
 **DC Motor**
 
-1. AdaFruit 711 DC Motor
+1. **AdaFruit 711 DC Motor**
 
    ![](711.png)
 
@@ -19,7 +19,7 @@
     | Excellent for lightweight robotics, small fans, toys, and prototyping where speed > torque. | Poor choice for gearless drivetrains, heavy actuators, or continuous high-torque applications without gearing. |
 
 
-2. HG37-120-AA-00
+2. **HG37-120-AA-00**
 
     ![](HG37-120-AA-00.jpg)
 
@@ -46,7 +46,7 @@
    
 **Voltage Regulator**
 
-1. L7805CV
+1. **L7805CV**
 
     ![](L7805CV.png)
 
@@ -61,7 +61,7 @@
     | **Common, inexpensive, and widely available** in through-hole (TO-220) and surface-mount packages.                   | Not efficient for **battery-powered systems**, as it wastes power as heat compared to switching regulators.                                       |
     
 
-2. LM2596S-5.0/NOPB
+2. **LM2596S-5.0/NOPB**
 
     ![](LM2596S-5.0NOPB.png)    
 
@@ -93,7 +93,7 @@
 
    **H Bridge**
 
-1. FAN8100N
+1. **FAN8100N**
 
     ![](FAN8100N.png)
 
@@ -107,7 +107,7 @@
     | Low standby current (~0.1 µA) and efficient operation for light loads.| Power dissipation limited (~2 W max) — thermal protection may trigger under continuous heavy load.|
     | Includes internal diodes, thermal shutdown, and short-circuit protection — enhances safety and reliability. | Protection circuitry cannot compensate for sustained overloads or poor heat sinking.|
 
-2. HIP4082IPZ
+2. **HIP4082IPZ**
 
     ![](HIP4082IPZ.jpg)
 
@@ -134,7 +134,7 @@
     The **FAN8100N H-bridge** is well-suited for driving the **Adafruit 711 DC motor** because their electrical characteristics complement each other. The 711 motor operates at around **6 V** and draws less than **300 mA** under typical load, which fits comfortably within the FAN8100N’s **0.8 A continuous** and **1.5 A peak** current limits. The H-bridge’s **dual-channel design** enables bidirectional speed and direction control for one or two small motors, making it ideal for tasks like opening and closing valves or actuating small pumps. Additionally, the **low standby current** and **integrated protection features** (thermal shutdown, short-circuit protection, and flyback diodes) help ensure safe and efficient operation in our low power system. Overall, this pairing provides a **cost-effective, reliable, and easy-to-interface** motor control solution that balances simplicity with sufficient performance for our project requirements.
 
 **Power Supply**
-1. BestCH 9V 3A AC Adapter
+1. **BestCH 9V 3A AC Adapter**
 
    ![](BestCH.jpg)
 
@@ -149,9 +149,9 @@
 | Barrel-plug output and standard form factor — easy to integrate into wiring harness and enclosure without custom PCB design.                | The 9 V output means either you must design downstream regulation (e.g., step-down to 5 V) or ensure your load is compatible — extra components add cost/complexity.                                        |
 | Off-the-shelf convenience — no need to design your own power supply from scratch, saving student time.                                      | Generic adapters may have limited protections (overvoltage, overcurrent, thermal) or lesser durability for outdoor/uncontrolled environments (e.g., moisture, dust) compared to rugged industrial supplies. |
 
-2. 9V 1.5A Adapter
+2.**9V 1.5A Adapter**
 
-   ![](.jpg)
+   ![](9v1.5a.jpg)
    
    * $12.99/each
    * [Link to product](https://www.amazon.com/110-240Vac-Adapter-Positive-Arduino-Schwinn/dp/B08F78R13B)
@@ -162,7 +162,7 @@
 | Center-positive barrel plug with interchangeable tips — good flexibility for plugging into different devices. | Maximum current is 1.5A — may be insufficient for heavier loads, motor drivers or start-surge conditions.  |
 | Built-in protections: overload, over-voltage, over-temperature, short-circuit — adds safety for general use. | Generic adapter: less detailed data on ripple/noise, transient response or suitability for sensitive electronics or motor noise environments. |
 
-3. Custom Solution
+3. **Custom Solution**
    A simplified custom power supply for the irrigation project could use a single battery source (e.g., 12 V Li-ion or SLA pack) to directly power the 711 motor through the FAN8100N H-bridge, while a small discrete buck converter steps down the 12 V to 5 V for the microcontroller and sensors.
 
 | Pros                                                                                                                     | Cons                                                                                                                                        |
