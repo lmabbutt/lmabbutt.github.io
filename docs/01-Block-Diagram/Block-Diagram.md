@@ -1,24 +1,11 @@
 ---
 title: Individal Block Diagram
-tags:
-- tag1
-- tag2
 ---
 
 ## Overview
-This needs to be updated with a brief purpose for having the block diagram.
-Things to mention are:
-* power levels
-* sensor
-* Actuator
-* team connections
-* Power source
-* ...
 
-To get some initial formatting help, one can view ["here"](https://embedded-systems-design.github.io/EGR304DataSheetTemplate/Appendix/basic-markdown-examples/) some basic techniques.
+This block diagram shows the layout of **Sprinkler Actuator Subsystem**, centered on the **PIC18F57Q43 Curiosity Nano** microcontroller. The system uses a **5 V, 1.5 A voltage regulator** to power logic components and a **9 V, 3 A supply** for the **711 DC motor**, controlled through the **FAN8100N H-bridge**. A **debug pushbutton**, **green LED**, and **Connector 1** provide user input, system feedback, and expansion connections. The design efficiently manages power and control signals, ensuring reliable operation for automated irrigation control.
 
+## Individual Block Diagram 
 
-## Example Block Diagram 
-Showing an example of how to import a screenshot of the block diagram created outside of git and brought into a page.
-
-![Example of Indivial Block diagram ](individual-block-diagram.png)
+![Example of Indivial Block diagram ](BlockDiagram.png)
