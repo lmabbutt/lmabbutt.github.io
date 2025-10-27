@@ -924,14 +924,14 @@
 </table>
 <p><strong>Choice and Rationale</strong>
     The Adafruit 711 DC motor is an appropriate choice for our autonomous irrigation project due to its low power consumption, compact size, and simple control requirements. Operating efficiently at a range up to 9V with a low current draw, it can be easily powered by our chosen H-Bridge. Its high rotational speed and lightweight design make it suitable for driving small pumps, valves, or mechanical actuators that manage water flow in an irrigation setup. While it is not intended for heavy-duty pumping, it offers a cost-effective and reliable option for demonstration-scale or prototype irrigation systems, where energy efficiency and ease of integration with microcontrollers are priorities.</p>
-<p><strong>Soil Moisture Sensor</strong></p>
+<p><strong>Voltage Regulator</strong></p>
 <ol>
 <li>
-<p>13637</p>
+<p>L7805CV</p>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../13637.jpg" data-desc-position="bottom"><img alt="" src="../13637.jpg"></a></p>
 <ul>
-<li>$7.95/each</li>
-<li><a href="https://www.digikey.com/en/products/detail/sparkfun-electronics/13637/7400839?gclsrc=aw.ds&amp;gad_source=1&amp;gad_campaignid=20243136172&amp;gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&amp;gclid=CjwKCAjwmNLHBhA4EiwA3ts3mayriRdZcvui0HTdYMicDMSrmrPi3kqTxbDrLqTR_hUmT-cr0AV9jhoCaVgQAvD_BwE">link to product</a></li>
+<li>$0.50/each</li>
+<li><a href="https://www.digikey.com/en/products/detail/stmicroelectronics/L7805CV/585964">link to product</a></li>
 </ul>
 <table>
 <thead>
@@ -942,16 +942,20 @@
 </thead>
 <tbody>
 <tr>
-<td>Capacitive measurement — less corrosion-prone and longer-lasting than resistive probes.</td>
-<td>Analog output only — requires ADC input on the microcontroller.</td>
+<td>Provides a <strong>stable and regulated 5V output</strong>, ideal for powering microcontrollers, sensors, and logic circuits.</td>
+<td>Being a <strong>linear regulator</strong>, it dissipates excess voltage as heat — inefficient for high input-output voltage differences or high current loads.</td>
 </tr>
 <tr>
-<td>Simple 3-wire interface — easy to connect to Arduino, ESP32, or other MCUs.</td>
-<td>Not factory-calibrated — needs user calibration for absolute moisture values.</td>
+<td><strong>Simple to use</strong> — requires only two external capacitors for stable operation.</td>
+<td><strong>Thermal dissipation</strong> can be significant; may require a heat sink if current exceeds ~500 mA with large voltage drop.</td>
 </tr>
 <tr>
-<td>Wide voltage range (3.3–5 V) — compatible with both 3.3 V and 5 V systems.</td>
-<td>Sensitive to electrical noise — may need filtering or shielding in long-wire installations.</td>
+<td><strong>Built-in protection</strong> features include thermal shutdown, short-circuit protection, and current limiting.</td>
+<td><strong>Input voltage must be at least 2V higher</strong> than the output (dropout voltage ~2V), so it’s not suitable for low headroom power supplies.</td>
+</tr>
+<tr>
+<td><strong>Common, inexpensive, and widely available</strong> in through-hole (TO-220) and surface-mount packages.</td>
+<td>Not efficient for <strong>battery-powered systems</strong>, as it wastes power as heat compared to switching regulators.</td>
 </tr>
 </tbody>
 </table>
