@@ -43,20 +43,22 @@
 **Choice and Rationale**
     The Adafruit 711 DC motor is an appropriate choice for our autonomous irrigation project due to its low power consumption, compact size, and simple control requirements. Operating efficiently at a range up to 9V with a low current draw, it can be easily powered by our chosen H-Bridge. Its high rotational speed and lightweight design make it suitable for driving small pumps, valves, or mechanical actuators that manage water flow in an irrigation setup. While it is not intended for heavy-duty pumping, it offers a cost-effective and reliable option for demonstration-scale or prototype irrigation systems, where energy efficiency and ease of integration with microcontrollers are priorities.
    
-**Soil Moisture Sensor**
+**Voltage Regulator**
 
-1. 13637
+1. L7805CV
 
     ![](13637.jpg)
 
-    * $7.95/each
-    * [link to product](https://www.digikey.com/en/products/detail/sparkfun-electronics/13637/7400839?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mayriRdZcvui0HTdYMicDMSrmrPi3kqTxbDrLqTR_hUmT-cr0AV9jhoCaVgQAvD_BwE)
-
+    * $0.50/each
+    * [link to product](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805CV/585964)
+ 
     | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Capacitive measurement — less corrosion-prone and longer-lasting than resistive probes.| Analog output only — requires ADC input on the microcontroller. |
-    | Simple 3-wire interface — easy to connect to Arduino, ESP32, or other MCUs.| Not factory-calibrated — needs user calibration for absolute moisture values.|
-    | Wide voltage range (3.3–5 V) — compatible with both 3.3 V and 5 V systems. | Sensitive to electrical noise — may need filtering or shielding in long-wire installations. |
+    | --------------------------------------------- | ---------------------------------------------------------------- |
+    | Provides a **stable and regulated 5V output**, ideal for powering microcontrollers, sensors, and logic circuits.     | Being a **linear regulator**, it dissipates excess voltage as heat — inefficient for high input-output voltage differences or high current loads. |
+    | **Simple to use** — requires only two external capacitors for stable operation.                                      | **Thermal dissipation** can be significant; may require a heat sink if current exceeds ~500 mA with large voltage drop.                           |
+    | **Built-in protection** features include thermal shutdown, short-circuit protection, and current limiting.           | **Input voltage must be at least 2V higher** than the output (dropout voltage ~2V), so it’s not suitable for low headroom power supplies.         |
+    | **Common, inexpensive, and widely available** in through-hole (TO-220) and surface-mount packages.                   | Not efficient for **battery-powered systems**, as it wastes power as heat compared to switching regulators.                                       |
+    
 
 2. SEN0114
 
