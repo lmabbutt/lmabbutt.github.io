@@ -74,15 +74,16 @@
 | **3 A output current capability** — Good for powering moderate loads.| **Not fully synchronous** — Because it is a non-synchronous switcher (requires external catch diode), the efficiency at very high load or low input/output difference may not match modern synchronous converters. |
 
 3. **Custom Electrical Option/Mechanical Option**
-    Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.
+    A custom alternative to an off-the-shelf voltage regulator could use a **discrete buck converter** built with a MOSFET, Schottky diode, inductor, and a PWM control IC such as the LM2576. This design offers **higher efficiency and lower heat generation** than linear regulators, ideal for solar or battery-powered irrigation systems. The circuit would include filtering capacitors, feedback resistors, and over-current protection, mounted on a custom PCB with proper heat dissipation and a protective enclosure. This approach provides **flexibility, better energy use, and easier integration** into the system’s control board while reinforcing key design and learning objectives.
 
-| Pros                                                                                   | Cons                                                                          |
-| -------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| **Low corrosion** (capacitive) — longer lifetime than exposed resistive probes.        | **Higher complexity & cost** than cheap resistive probe.                             |
-| **Low power** — can be battery operated for months/years.                              | **Probe coating affects sensitivity** — must choose coating carefully and calibrate. |
-| **High accuracy & repeatability** with cap-to-digital IC and temperature compensation. | **Environmental factors (salinity, soil composition)** still require calibration.    |
-| **Digital output & easy integration** (I²C/ADC) for embedded projects.                 | **Sealing & waterproofing complexity** — requires good mechanical design.            |
-| **Customizable form factor & depth sensitivity** via probe geometry.                   | **Long-term drift possible** — periodic recalibration recommended.                   |
+
+| Pros                                                                                                                                 | Cons                                                                                                                             |
+| ------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------- |
+| **High efficiency** — far less power wasted as heat vs. linear regs, improving battery/solar run-time.                               | **Higher design complexity** — requires correct selection of MOSFET, diode/inductor, controller, layout and compensation.         |
+| **Smaller heatsinking** — lower dissipation means smaller heatsinks or none, enabling more compact designs.                          | **Greater EMI/noise** — switching creates electrical noise that may need filtering for sensitive sensors/MCU.                     |
+| **Easier integration** — can place connectors, filters, and monitoring points exactly where the project needs them.                  | **Sourcing / lead-time** — specific inductors or low-Rds(on MOSFETs) may have lead times or price variability.                    |
+| **Custom protection options** — include input TVS, soft-start, current limit, thermal shutdown, reverse polarity protection.         | **Regulatory / safety testing** — if deployed outdoors or in schools, you may need to validate safety/EMC which increases effort. |
+
 
 **Choice and Rationale**
     The **L7805CV voltage regulator** is a practical choice for our project because it provides a **simple, reliable, and stable 5V output** for powering microcontrollers, sensors, and control circuits. Its **ease of use**—requiring only minimal external components—makes it ideal for quick prototyping and meets the overall requirements for our projects. The built-in **thermal shutdown, current limiting, and short-circuit protection** features ensure safe and consistent operation, even under less-than-ideal conditions. Although it is less efficient than modern switching regulators, the L7805CV’s **low cost, availability, and straightforward design** make it a solid solution for our purposes.
