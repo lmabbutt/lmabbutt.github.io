@@ -85,7 +85,8 @@
 | **Customizable form factor & depth sensitivity** via probe geometry.                   | **Long-term drift possible** — periodic recalibration recommended.                   |
 
 **Choice and Rationale**
-    The **SEN0114 soil moisture sensor** was selected as the best option because it offers a reliable and easy-to-use design with analog output, making it simple to integrate into a microcontroller-based system. It provides stable readings compared to cheaper resistive sensors and is less prone to corrosion due to its corrosion-resistant coating. The SEN0114 also includes clear documentation and calibration support from DFRobot, ensuring consistent data collection for soil monitoring applications. While it is slightly more expensive than basic resistive sensors like the 13637, its improved durability, accuracy, and compatibility with embedded systems make it the most dependable and efficient choice for this project.
+    The **L7805CV voltage regulator** is a practical choice for our project because it provides a **simple, reliable, and stable 5V output** for powering microcontrollers, sensors, and control circuits. Its **ease of use**—requiring only minimal external components—makes it ideal for quick prototyping and meets the overall requirements for our projects. The built-in **thermal shutdown, current limiting, and short-circuit protection** features ensure safe and consistent operation, even under less-than-ideal conditions. Although it is less efficient than modern switching regulators, the L7805CV’s **low cost, availability, and straightforward design** make it a solid solution for our purposes.
+
 
 
    **H Bridge**
