@@ -5,7 +5,7 @@
 
 1. AdaFruit 711 DC Motor
 
-   ![](711 DC Motor.png)
+   ![](711.png)
 
     * $1.95/each
     * [link to product](https://www.digikey.com/en/products/detail/adafruit-industries-llc/711/5353610?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLlhl1FW1Wjj4ieek0F8WLsTTK&gclid=CjwKCAjwjffHBhBuEiwAKMb8pIf5j8fn3Y5DqKT9JQaZDD6ReWLr_gdSpv1T_ynpheKjqwGf2sxxZBoCSCIQAvD_BwE)
@@ -47,7 +47,7 @@
 
 1. L7805CV
 
-    ![](13637.jpg)
+    ![](L7805CV.png)
 
     * $0.50/each
     * [link to product](https://www.digikey.com/en/products/detail/stmicroelectronics/L7805CV/585964)
@@ -62,7 +62,7 @@
 
 2. LM2596S-5.0/NOPB
 
-    ![](SEN0114.jpg)    
+    ![](LM2596S-5.0NOPB.png)    
 
     * $6.97/each
     * [Link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-5-0-NOPB/334842?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&gclid=CjwKCAjwjffHBhBuEiwAKMb8pIywmR_rOZ2D7phSToa-dDFOJG8xSLg9A2nu5mbH3dzjYsYaxZFg4BoCqPYQAvD_BwE)
@@ -92,7 +92,7 @@
 
 1. FAN8100N
 
-    ![](INA125P.png)
+    ![](FAN8100N.png)
 
     * $1.16/each
     * [link to product](https://www.digikey.com/en/products/detail/fairchild-semiconductor/FAN8100N/11558200)
