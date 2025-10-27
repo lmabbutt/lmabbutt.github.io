@@ -60,18 +60,18 @@
     | **Common, inexpensive, and widely available** in through-hole (TO-220) and surface-mount packages.                   | Not efficient for **battery-powered systems**, as it wastes power as heat compared to switching regulators.                                       |
     
 
-2. SEN0114
+2. LM2596S-5.0/NOPB
 
     ![](SEN0114.jpg)    
 
-    * $2.70/each
-    * [Link to product](https://www.digikey.com/en/products/detail/dfrobot/SEN0114/6588525?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLljBQunprEOtznelsRLs-J4uH&gclid=CjwKCAjwmNLHBhA4EiwA3ts3mbQSvFXrFn6uSSuxGg_qehQQK9Uty_P8yXZ4lFzpzHMJX-7nO5745RoCtCwQAvD_BwE)
+    * $6.97/each
+    * [Link to product](https://www.digikey.com/en/products/detail/texas-instruments/LM2596S-5-0-NOPB/334842?gclsrc=aw.ds&gad_source=1&gad_campaignid=120565755&gbraid=0AAAAADrbLlhiVO2X4tb4kz7_jZIGtwYQb&gclid=CjwKCAjwjffHBhBuEiwAKMb8pIywmR_rOZ2D7phSToa-dDFOJG8xSLg9A2nu5mbH3dzjYsYaxZFg4BoCqPYQAvD_BwE)
 
-    | Pros                                                              | Cons                |
-    | ----------------------------------------------------------------- | ------------------- |
-    | Low-cost sensor — one of the most inexpensive soil moisture probes available.                                         | Prone to corrosion — exposed electrodes degrade quickly when left in wet soil for long periods.     |
-    | Simple 3-wire analog interface — easily integrates with microcontrollers (Arduino, ESP32, etc.).                                | Requires calibration — analog output varies with soil type and salinity; no absolute moisture reference. |
-    | Compatible with both 3.3 V and 5 V logic — flexible for most embedded platforms. | High current draw (~35 mA) compared to capacitive alternatives (less suitable for low-power systems). |
+| Pros                                                                  | Cons               |
+| --------------------------------------------------------------------- | ------------------ |
+| **High efficiency (switching regulator)** — Because it’s a buck converter operating at ~150 kHz, it wastes much less power as heat compared to linear regulators. | **Requires external components** — You’ll need to choose and size inductor(s), diode(s), capacitors properly. More design effort than a simple 3-terminal linear regulator. |
+| **Wide input voltage range** — Operates from ~4.5 V up to 40 V input, making it suitable for many battery/solar systems.| **Requires good layout/thermal considerations** — At high currents or large input/output difference, cooling and PCB layout become important to avoid overheating or noise. |
+| **3 A output current capability** — Good for powering moderate loads.| **Not fully synchronous** — Because it is a non-synchronous switcher (requires external catch diode), the efficiency at very high load or low input/output difference may not match modern synchronous converters. |
 
 3. **Custom Electrical Option/Mechanical Option**
     Design a durable, low-power, accurate soil-moisture sensing module. Uses a capacitive sensing element, temperature compensation, waterproofing, and an optional digital output (I²C) for easy integration.
