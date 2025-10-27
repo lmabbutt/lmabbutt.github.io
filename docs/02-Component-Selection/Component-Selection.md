@@ -7,18 +7,16 @@
 
     ![](MFG_PC280LG-301.jpg)
 
-    * $7.27/each
-    * [link to product](https://www.digikey.com/en/products/detail/johnson-motor/PC280LG-301/12719595?s=N4IgTCBcDaIAoGEwA4AMAZA4gWgMyoEYQBdAXyA)
+    * $1.95/each
+    * [link to product](https://www.digikey.com/en/products/detail/adafruit-industries-llc/711/5353610?gclsrc=aw.ds&gad_source=1&gad_campaignid=20243136172&gbraid=0AAAAADrbLlhl1FW1Wjj4ieek0F8WLsTTK&gclid=CjwKCAjwjffHBhBuEiwAKMb8pIf5j8fn3Y5DqKT9JQaZDD6ReWLr_gdSpv1T_ynpheKjqwGf2sxxZBoCSCIQAvD_BwE)
 
-    | Pros                                      | Cons                                                             |
-    | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Compact, lightweight package — good for small actuators and tight space. (Ø ~25 mm, ~52 g).                         | Low output torque at shaft — needs gearbox for meaningful load/positioning (nominal torque ~4.6 mN·m). |
-    | High free-running speed (9,300 RPM) — useful where high speed is desired or for small gearboxes.                    | Very high RPM at the motor shaft is often not useful directly for robotics/positioning; gearing/torque conversion required which adds complexity.                                        |
-    | Relatively low nominal current (0.32 A) — low steady-state power draw for light loads. | Stall current ~1.8 A — motor driver must handle surge (and have current limiting); supply must support transient current.|
-    | Affordable / widely available — low unit price through distributors (typical single-unit price in low dollars).| Brushed design — brush wear, brush noise/EMI, and maintenance over time; not as long-lived as brushless options in many applications.|
-    | Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.| No built-in encoder/feedback — if position/speed closed-loop control is required, you must add an external encoder or hall sensor.|
-    | Solder-tab terminations — easy to wire for PCB or harness connections in simple builds.| Short listed life in some datasheets. For continuous high-load duty a more robust motor or gearbox may be required.|
-        
+    | Pros                                                              | Cons                |
+    | ----------------------------------------------------------------- | ------------------- |
+    | Very high no-load speed (~9,100 RPM) — good for fast small mechanisms and toy/hobby use. | Low rated torque (≈10 g·cm / 0.098 N·cm) — not suitable for heavy loads or direct-drive high-torque tasks. |
+    | Low no-load current (~70 mA) and modest loaded current (~250 mA) — easy to drive from small motor drivers or battery packs. | Stall current fairly low (~500 mA) but still requires driver/device that can handle stalls; continuous high load will overheat. |
+    | Rated 6 V (operating range commonly ~4.5–9 V for hobby use) — flexible for 5 V/6 V/9 V systems. | Not specified for precision speed control or long-term continuous duty at higher voltages; expect shorter life if run hot/overloaded. |
+    | 130-size hobby motor — small (≈27.5 × 20 × 15 mm), light (~17.5 g) and easy to integrate into hobby builds; common shaft diameter (2 mm). | Shaft is small (2 mm) and short (8 mm) — may need couplers/gears for secure mounting; no integrated mounting flanges — adds mechanical adaptation work. |
+    | Excellent for lightweight robotics, small fans, toys, and prototyping where speed > torque. | Poor choice for gearless drivetrains, heavy actuators, or continuous high-torque applications without gearing. |
 
 2. HG37-120-AA-00
 
@@ -43,7 +41,7 @@
    |Integrated high-resolution feedback — encoder on output gives direct, backlash-compensated position readings.|Longer development time & potential higher unit cost for single pieces.|
 
 **Choice and Rationale**
-    The HG37-120-AA-00 DC motor was selected as the optimal choice because it provides a strong balance of torque, speed, and reliability for the project. Its integrated 120:1 planetary gearbox delivers the low-speed, high-torque output needed for precise motion without requiring additional mechanical components. This integration simplifies assembly, reduces design time, and ensures consistent performance. The motor’s documented specifications and build quality make it easier to model, test, and control compared to cheaper hobby motors. Although it costs slightly more than basic options like the PC280LG-301, the HG37-120-AA-00’s ease of integration, reliability, and predictable results make it the most practical and efficient solution for this embedded systems design project.
+    The Adafruit 711 DC motor is an appropriate choice for our autonomous irrigation project due to its low power consumption, compact size, and simple control requirements. Operating efficiently at a range up to 9V with a low current draw, it can be easily powered by our chosen H-Bridge. Its high rotational speed and lightweight design make it suitable for driving small pumps, valves, or mechanical actuators that manage water flow in an irrigation setup. While it is not intended for heavy-duty pumping, it offers a cost-effective and reliable option for demonstration-scale or prototype irrigation systems, where energy efficiency and ease of integration with microcontrollers are priorities.
    
 **Soil Moisture Sensor**
 
