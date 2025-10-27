@@ -1158,6 +1158,63 @@
 </tr>
 </tbody>
 </table>
+<ol>
+<li>9V 1.5A Adapter</li>
+<li>$12.99/each</li>
+<li><a href="https://www.amazon.com/110-240Vac-Adapter-Positive-Arduino-Schwinn/dp/B08F78R13B">Link to product</a></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wide input voltage range (100-240V AC, 50/60Hz) — so it works in many regions/outlets.</td>
+<td>Output is 9 V DC only — will need voltage regulation.</td>
+</tr>
+<tr>
+<td>Center-positive barrel plug with interchangeable tips — good flexibility for plugging into different devices.</td>
+<td>Maximum current is 1.5A — may be insufficient for heavier loads, motor drivers or start-surge conditions.</td>
+</tr>
+<tr>
+<td>Built-in protections: overload, over-voltage, over-temperature, short-circuit — adds safety for general use.</td>
+<td>Generic adapter: less detailed data on ripple/noise, transient response or suitability for sensitive electronics or motor noise environments.</td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>Custom Solution
+   A simplified custom power supply for the irrigation project could use a single battery source (e.g., 12 V Li-ion or SLA pack) to directly power the 711 motor through the FAN8100N H-bridge, while a small discrete buck converter steps down the 12 V to 5 V for the microcontroller and sensors.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Simple design</strong> — fewer components, smaller PCB, easier to assemble.</td>
+<td><strong>Voltage regulation dependent on buck design</strong> — if poorly built, 5 V rail may be noisy or unstable.</td>
+</tr>
+<tr>
+<td><strong>Direct motor drive</strong> — 12 V battery feeds motor through H-bridge with minimal conversion losses, improving efficiency.</td>
+<td><strong>Battery management required</strong> — need to monitor charge, prevent over-discharge, and handle replacement/recharging.</td>
+</tr>
+<tr>
+<td><strong>Compact and lightweight</strong> — small enclosure, minimal heatsinks, fewer bulky components.</td>
+<td><strong>Limited current capacity</strong> — size of battery and buck converter limits total motor runtime and load capability.</td>
+</tr>
+<tr>
+<td><strong>Low cost</strong> — avoids purchasing commercial adapters; uses generic components like MOSFET, inductor, diode, capacitor.</td>
+<td><strong>Less protection against transients</strong> — simpler design may be more vulnerable to voltage spikes or motor back-EMF without extra circuitry.</td>
+</tr>
+</tbody>
+</table>
 
 
 
