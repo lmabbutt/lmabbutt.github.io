@@ -88,20 +88,21 @@
 
    **H Bridge**
 
-1. INA125P
+1. FAN8100N
 
     ![](INA125P.png)
 
-    * $10.08/each
-    * [link to product](https://www.digikey.com/en/products/detail/texas-instruments/INA125P/254670?gclsrc=aw.ds&gad_source=4&gad_campaignid=20228387720&gbraid=0AAAAADrbLlhdskTRyyOweqI0wZs3p_N9a&gclid=CjwKCAjwmNLHBhA4EiwA3ts3maSekNz6cEfK83rlFOWYgj_-v-7Q3MSDubHQqxA6B9jR7x_icL5iBhoC0mcQAvD_BwE)
+    * $1.16/each
+    * [link to product](https://www.digikey.com/en/products/detail/fairchild-semiconductor/FAN8100N/11558200)
 
     | Pros                                      | Cons                                                             |
     | ----------------------------------------- | ---------------------------------------------------------------- |
-    | Integrated precision voltage reference — simplifies powering bridge sensors and reduces external component count.| Requires proper PCB layout — noise pickup can degrade performance if wiring is unshielded. |
-    | Wide supply range (2.7 V–36 V) — compatible with many analog and mixed-signal systems.                  | Through-hole PDIP form — larger footprint; may need breakout for compact embedded boards.  |
-    | Adjustable gain (4 – 10,000) — flexible for various sensor outputs and ADC ranges. | Reference current limited to ~25 mA — cannot power large sensors or multiple bridges.|
+    | Wide operating voltage range (1.8 V–9 V motor supply, 2.2 V–9 V logic) — compatible with most microcontrollers and battery-powered systems. | Limited maximum voltage (9 V) — unsuitable for higher-voltage motor applications. |
+    | Dual H-bridge channels in a single IC — allows control of two DC motors or one stepper motor.| Moderate current capacity (≈0.8 A typical per channel, ~1.5 A peak) — insufficient for large or high-torque motors. |
+    | Low standby current (~0.1 µA) and efficient operation for light loads.| Power dissipation limited (~2 W max) — thermal protection may trigger under continuous heavy load.|
+    | Includes internal diodes, thermal shutdown, and short-circuit protection — enhances safety and reliability. | Protection circuitry cannot compensate for sustained overloads or poor heat sinking.|
 
-2. HIP4082IPZ
+3. HIP4082IPZ
 
     ![](HIP4082IPZ.jpg)
 
@@ -114,7 +115,7 @@
     | High voltage tolerance (up to 80 V) — supports large DC motors or inductive loads.| Complex circuit design — needs bootstrap capacitors, MOSFET selection, and protection circuitry. |
     | High drive current (2.5 A) — enables fast switching of large MOSFET gates. |Requires proper PCB layout — sensitive to high dv/dt and EMI in high-current applications.|
 
-3. **Custom Electrical Option/Mechanical Option**
+4. **Custom Electrical Option/Mechanical Option**
        Build a robust, efficient, bidirectional motor driver (H-bridge) that supports PWM speed control, current limiting, and fast switching for motors up to chosen supply.
    
 | Pros                                               | Cons        |
@@ -125,6 +126,7 @@
 | **Easier repairability** — individual transistors and components can be replaced if damaged.                                         | **Thermal management challenges** — heat sinks or fans may be needed to maintain safe operating temperatures.                       |
 
 **Choice and Rationale**
-    The **HIP4082IPZ H-bridge driver** was selected as the optimal choice because it provides high efficiency, robustness, and flexibility for controlling DC motors in the project. It supports **high-voltage operation up to 80 V** and can deliver large peak currents, making it suitable for a wide range of motor sizes. The HIP4082IPZ also features built-in **high- and low-side MOSFET drivers**, allowing precise PWM control and reliable switching performance. Although it requires external MOSFETs and slightly more complex circuit design compared to all-in-one motor driver ICs, this modular approach offers greater customization and power-handling capability. Its strong balance of performance, control precision, and scalability makes it the most effective and future-proof solution for the project’s motor control needs.
+    The **FAN8100N H-bridge** is well-suited for driving the **Adafruit 711 DC motor** because their electrical characteristics complement each other. The 711 motor operates at around **6 V** and draws less than **300 mA** under typical load, which fits comfortably within the FAN8100N’s **0.8 A continuous** and **1.5 A peak** current limits. The H-bridge’s **dual-channel design** enables bidirectional speed and direction control for one or two small motors, making it ideal for tasks like opening and closing valves or actuating small pumps. Additionally, the **low standby current** and **integrated protection features** (thermal shutdown, short-circuit protection, and flyback diodes) help ensure safe and efficient operation in our low power system. Overall, this pairing provides a **cost-effective, reliable, and easy-to-interface** motor control solution that balances simplicity with sufficient performance for our project requirements.
+
 
 
