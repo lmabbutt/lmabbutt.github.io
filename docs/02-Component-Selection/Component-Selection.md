@@ -136,6 +136,8 @@
 **Power Supply**
 1. BestCH 9V 3A AC Adapter
 
+   ![](BestCH.jpg)
+
 * $4.52/each
 * [Link to product](https://www.amazon.com/gp/product/B09ZTKTLGW/)
   
@@ -148,6 +150,9 @@
 | Off-the-shelf convenience — no need to design your own power supply from scratch, saving student time.                                      | Generic adapters may have limited protections (overvoltage, overcurrent, thermal) or lesser durability for outdoor/uncontrolled environments (e.g., moisture, dust) compared to rugged industrial supplies. |
 
 2. 9V 1.5A Adapter
+
+   ![](.jpg)
+   
    * $12.99/each
    * [Link to product](https://www.amazon.com/110-240Vac-Adapter-Positive-Arduino-Schwinn/dp/B08F78R13B)
 
@@ -166,6 +171,9 @@
 | **Direct motor drive** — 12 V battery feeds motor through H-bridge with minimal conversion losses, improving efficiency. | **Battery management required** — need to monitor charge, prevent over-discharge, and handle replacement/recharging.                        |
 | **Compact and lightweight** — small enclosure, minimal heatsinks, fewer bulky components.                                | **Limited current capacity** — size of battery and buck converter limits total motor runtime and load capability.                           |
 | **Low cost** — avoids purchasing commercial adapters; uses generic components like MOSFET, inductor, diode, capacitor.   | **Less protection against transients** — simpler design may be more vulnerable to voltage spikes or motor back-EMF without extra circuitry. |
+
+**Choice and Rationale**
+    The 9 V, 3 A power supply provides a simple, safe, and reliable source for the project’s microcontroller and sensors. With sufficient current to support a 5 V regulator, wide AC input, and built-in protections, it ensures stable operation of the logic and control electronics while simplifying the power design.
 
 
 
