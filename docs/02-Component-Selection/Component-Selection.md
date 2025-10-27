@@ -133,5 +133,18 @@
 **Choice and Rationale**
     The **FAN8100N H-bridge** is well-suited for driving the **Adafruit 711 DC motor** because their electrical characteristics complement each other. The 711 motor operates at around **6 V** and draws less than **300 mA** under typical load, which fits comfortably within the FAN8100N’s **0.8 A continuous** and **1.5 A peak** current limits. The H-bridge’s **dual-channel design** enables bidirectional speed and direction control for one or two small motors, making it ideal for tasks like opening and closing valves or actuating small pumps. Additionally, the **low standby current** and **integrated protection features** (thermal shutdown, short-circuit protection, and flyback diodes) help ensure safe and efficient operation in our low power system. Overall, this pairing provides a **cost-effective, reliable, and easy-to-interface** motor control solution that balances simplicity with sufficient performance for our project requirements.
 
+**Power Supply**
+1. BestCH 9V 3A AC Adapter
+
+* $4.52/each
+* [Link to product](https://www.amazon.com/gp/product/B09ZTKTLGW/)
+  
+| Pros                                                                                                                                        | Cons                                                                                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Widely available and inexpensive — easy to buy for a school project and replace if needed.                                                  | Output of 9 V may **not** match your required voltage (for example, if you need 5 V) — you may need additional regulation or conversion.                                                                    |
+| Likely supports a wide input range (100-240 V AC) — convenient for lab/classroom/worldwide use.                                             | Being a generic adapter, specification details (ripple, exact current capability, transient response) may be less reliable or documented than name-brand regulated units.                                   |
+| Provides 3 A output — a decent current capacity for moderate loads (sensors, microcontrollers, small actuators) in your irrigation project. | If your project requires higher continuous current, or if the motor/start-up surge exceeds its rating, this adapter may not suffice. Also heat dissipation may be an issue when pushing near full load.     |
+| Barrel-plug output and standard form factor — easy to integrate into wiring harness and enclosure without custom PCB design.                | The 9 V output means either you must design downstream regulation (e.g., step-down to 5 V) or ensure your load is compatible — extra components add cost/complexity.                                        |
+| Off-the-shelf convenience — no need to design your own power supply from scratch, saving student time.                                      | Generic adapters may have limited protections (overvoltage, overcurrent, thermal) or lesser durability for outdoor/uncontrolled environments (e.g., moisture, dust) compared to rugged industrial supplies. |
 
 
