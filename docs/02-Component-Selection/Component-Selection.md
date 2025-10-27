@@ -147,4 +147,28 @@
 | Barrel-plug output and standard form factor — easy to integrate into wiring harness and enclosure without custom PCB design.                | The 9 V output means either you must design downstream regulation (e.g., step-down to 5 V) or ensure your load is compatible — extra components add cost/complexity.                                        |
 | Off-the-shelf convenience — no need to design your own power supply from scratch, saving student time.                                      | Generic adapters may have limited protections (overvoltage, overcurrent, thermal) or lesser durability for outdoor/uncontrolled environments (e.g., moisture, dust) compared to rugged industrial supplies. |
 
+2. 9V 1.5A Adapter
+   * $12.99/each
+   * [Link to product](https://www.amazon.com/110-240Vac-Adapter-Positive-Arduino-Schwinn/dp/B08F78R13B)
+
+| Pros                                               | Cons                                        |
+| -------------------------------------------------- | ------------------------------------------- |
+| Wide input voltage range (100-240V AC, 50/60Hz) — so it works in many regions/outlets. | Output is 9 V DC only — will need voltage regulation.  |
+| Center-positive barrel plug with interchangeable tips — good flexibility for plugging into different devices. | Maximum current is 1.5A — may be insufficient for heavier loads, motor drivers or start-surge conditions.  |
+| Built-in protections: overload, over-voltage, over-temperature, short-circuit — adds safety for general use. | Generic adapter: less detailed data on ripple/noise, transient response or suitability for sensitive electronics or motor noise environments. |
+
+3. Custom Solution
+   A simplified custom power supply for the irrigation project could use a single battery source (e.g., 12 V Li-ion or SLA pack) to directly power the 711 motor through the FAN8100N H-bridge, while a small discrete buck converter steps down the 12 V to 5 V for the microcontroller and sensors.
+
+| Pros                                                                                                                     | Cons                                                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Simple design** — fewer components, smaller PCB, easier to assemble.                              | **Voltage regulation dependent on buck design** — if poorly built, 5 V rail may be noisy or unstable.                                       |
+| **Direct motor drive** — 12 V battery feeds motor through H-bridge with minimal conversion losses, improving efficiency. | **Battery management required** — need to monitor charge, prevent over-discharge, and handle replacement/recharging.                        |
+| **Compact and lightweight** — small enclosure, minimal heatsinks, fewer bulky components.                                | **Limited current capacity** — size of battery and buck converter limits total motor runtime and load capability.                           |
+| **Low cost** — avoids purchasing commercial adapters; uses generic components like MOSFET, inductor, diode, capacitor.   | **Less protection against transients** — simpler design may be more vulnerable to voltage spikes or motor back-EMF without extra circuitry. |
+
+
+
+
+
 
