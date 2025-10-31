@@ -8,4 +8,4 @@ This block diagram shows the layout of **Sprinkler Actuator Subsystem**, centere
 
 ## Individual Block Diagram 
 
-![Example of Indivial Block diagram ](BlockDiagram.png)
+![Individual Block Diagram]("Individual Block Diagram.png")
