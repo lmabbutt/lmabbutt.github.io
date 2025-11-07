@@ -7,7 +7,7 @@ title: Schematic
 This is the schematic design of my subsystem of the team project. My subsystem handles sending and receiving signals from the hub microcontroller and actuating the sprinkler head.
 
 
-![schematic](SCHEMATIC1.png)
+![schematic](SCHEMATIC.png)
 
 
 ## Resouces
