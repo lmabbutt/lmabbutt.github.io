@@ -12,4 +12,4 @@ This is the schematic design of my subsystem of the team project. My subsystem h
 
 ## Resouces
 
-The schematic as a PDF download is available [*here*](SCHEMATIC1.pdf).
+The schematic as a PDF download is available [*here*](SCHEMATIC.pdf).
