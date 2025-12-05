@@ -4,7 +4,7 @@ title: Microcontroller Code
 
 ## Overview
 
-This project was programmed in C using the MPLabX IDE and resources native to the IDE including MCC. The packaged MCC zip file can be found at the link below
+This project was programmed in C using the MPLabX IDE and resources native to the IDE including MCC. The packaged MPLabX zip file can be found at the link below
 
 ## Resouces
 
